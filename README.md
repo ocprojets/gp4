@@ -9,3 +9,14 @@
 **L'objectif est de créer un indicateur visuel et sonore simple, utile pour détecter une surchauffe ou la présence d'un objet chaud à proximité.**
 
 # Démarche
+1. **Choix du capteur DHT11 pour mesurer la température ambiante**
+2. **Idée d'utiliser un servo comme aiguille d'un thermomètre analogique**
+3. **Ajout d'un buzzer pour une alerte au-delà du seuil de 30°C**
+4. **Calibration de la conversion température -> angle (0°C = 0°, 50°C = 180°)**
+
+| Composant | Fonctionnement | Rôle |
+|-----------|-------------|--------------------|
+| Raspberry Pi Pico H | Champ de saisie | `Microcontrôleur principal` |
+| Capteur DHT11 | Champ de saisie | `Mesure de la température` |
+| Buzzer | Champ de saisie | `Alarme sonore (≥ 30°C)` |
+| Servomoteur | Champ de saisie | `Indicateur visuel (aiguille)` |
