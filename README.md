@@ -31,4 +31,5 @@
 
 # Schéma de cablage
 
+<img width="666" height="573" alt="schéma de cablage" src="https://github.com/user-attachments/assets/67b1e692-09e4-42fb-a5ac-0c1bd1077e54" />
 
