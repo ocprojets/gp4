@@ -16,7 +16,7 @@
 
 | Composant | Fonctionnement | Rôle |
 |-----------|-------------|--------------------|
-| Raspberry Pi Pico H | Champ de saisie | `Microcontrôleur principal` |
-| Capteur DHT11 | Champ de saisie | `Mesure de la température` |
-| Buzzer | Champ de saisie | `Alarme sonore (≥ 30°C)` |
-| Servomoteur | Champ de saisie | `Indicateur visuel (aiguille)` |
+| Raspberry Pi Pico H | petit microcontrôleur qui éxecute le code | `Microcontrôleur principal` |
+| Capteur DHT11 | mesure la température de l'air autour de lui | `Mesure de la température` |
+| Buzzer | petit haut parleur qui emet un son | `Alarme sonore (≥ 30°C)` |
+| Servomoteur | se positionne entr 0 - 180 degré | `Indicateur visuel (aiguille)` |
