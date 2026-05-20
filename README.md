@@ -29,7 +29,12 @@
 - **Debo Buzzer Passif P1** : Un buzzer passif est un composant qui produit un son lorsqu'on lui envoie un signal PWM oscillant. Contrairement à un buzzer actif, il a besoin d'une fréquence externe pour sonner — ce qui permet de contrôler le ton du son.
 - **Principe techniques** : Le buzzer reçoit un signal PWM sur GPIO14
 
+- **Source** : https://components101.com/sensors/dht11-temperature-sensor
+https://www.reichelt.com/de/en/shop/product/developer_boards_-_buzzer_passive-282661
+
 # Schéma de cablage
 
 <img width="666" height="573" alt="schéma de cablage" src="https://github.com/user-attachments/assets/67b1e692-09e4-42fb-a5ac-0c1bd1077e54" />
+
+# Explication du code
 
