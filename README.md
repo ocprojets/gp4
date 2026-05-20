@@ -56,4 +56,3 @@ C'est le cœur du programme. Il s'exécute en boucle infinie et effectue les act
 - **Déplacement du servo** — la température est convertie en angle avec (température / 50) × 180, ce qui fait pointer l'aiguille vers la bonne graduation sur le cadran papier.
 - **Déclenchement du buzzer** — si la température est supérieure ou égale à 30°C, le buzzer s'active ; sinon, il reste silencieux.
 - **Gestion des erreurs** — si le DHT11 ne répond pas (mauvais câblage, absence de résistance pull-up), une erreur OSError est capturée et un message explicatif s'affiche dans la console.
-- 
