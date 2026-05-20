@@ -37,4 +37,23 @@ https://www.reichelt.com/de/en/shop/product/developer_boards_-_buzzer_passive-28
 <img width="666" height="573" alt="schéma de cablage" src="https://github.com/user-attachments/assets/67b1e692-09e4-42fb-a5ac-0c1bd1077e54" />
 
 # Explication du code
-
+## Structure générale
+Le code est divisé en trois parties : l'initialisation des composants, la définition des fonctions, et la boucle principale qui tourne en continu.
+## Initialisation des composants
+Au démarrage, le programme configure les trois composants :
+- Le DHT11 est associé à la broche GP15 via la librairie dht
+- Le buzzer est configuré en PWM sur GP14 avec une fréquence de 4000 Hz (son aigu)
+- Le servo est configuré en PWM sur GP16 avec une fréquence de 50 Hz (standard pour les servos)
+## Fonction set_servo_angle(angle)
+Cette fonction convertit un angle (entre 0° et 180°) en signal PWM compréhensible par le servo. Elle commence par sécuriser la valeur reçue pour qu'elle reste dans la plage autorisée, puis calcule la largeur d'impulsion correspondante avec la formule : duty = 1000 + (angle / 180) × 8000 .
+Plus l'angle est grand, plus le duty cycle est élevé, et plus le servo tourne vers la droite sur le cadran.
+## Fonctions buzzer_on() et buzzer_off()
+buzzer_on() envoie un duty cycle très élevé (60 000 sur 65 535) au buzzer pour produire un son fort. buzzer_off() envoie 0 pour couper le son complètement.
+## Boucle principale (while True)
+C'est le cœur du programme. Il s'exécute en boucle infinie et effectue les actions suivantes à chaque cycle :
+- **Attente de 2 secondes** — le DHT11 ne peut faire qu'une mesure toutes les 2 secondes minimum.
+- **Mesure de la température** — capteur.measure() déclenche la lecture, capteur.temperature() récupère la valeur.
+- **Déplacement du servo** — la température est convertie en angle avec (température / 50) × 180, ce qui fait pointer l'aiguille vers la bonne graduation sur le cadran papier.
+- **Déclenchement du buzzer** — si la température est supérieure ou égale à 30°C, le buzzer s'active ; sinon, il reste silencieux.
+- **Gestion des erreurs** — si le DHT11 ne répond pas (mauvais câblage, absence de résistance pull-up), une erreur OSError est capturée et un message explicatif s'affiche dans la console.
+- 
