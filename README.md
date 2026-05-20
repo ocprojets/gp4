@@ -28,3 +28,7 @@
 
 - **Debo Buzzer Passif P1** : Un buzzer passif est un composant qui produit un son lorsqu'on lui envoie un signal PWM oscillant. Contrairement à un buzzer actif, il a besoin d'une fréquence externe pour sonner — ce qui permet de contrôler le ton du son.
 - **Principe techniques** : Le buzzer reçoit un signal PWM sur GPIO14
+
+# Schéma de cablage
+
+
